@@ -1,4 +1,4 @@
-import Svg, { Path } from "react-native-svg";
+import Svg, { Circle, Path } from "react-native-svg";
 
 export const IconPlay = () => {
   return (
@@ -13,6 +13,40 @@ export const IconPause = () => {
     <Svg width="12" height="14" viewBox="0 0 12 14" fill="none">
       <Path
         d="M8.01562 0H12V13.9688H8.01562V0ZM0 13.9688V0H3.98438V13.9688H0Z"
+        fill="#021123"
+      />
+    </Svg>
+  );
+};
+
+export const IconCheck = ({ checked }) => {
+  return (
+    <Svg width="18" height="14" viewBox="0 0 18 14" fill="none">
+      <Circle cx="12" cy="12" r="12" fill={checked ? "#00f4bf" : "#fff"} />
+      <Path
+        d="M5.57812 10.5938L16.1719 0L17.5781 1.40625L5.57812 13.4062L0 7.82812L1.40625 6.42188L5.57812 10.5938Z"
+        fill="#021123"
+      />
+    </Svg>
+  );
+};
+
+export const IconPencil = () => {
+  return (
+    <Svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+      <Path
+        d="M17.7188 4.03125L15.8906 5.85938L12.1406 2.10938L13.9688 0.28125C14.1562 0.09375 14.3906 0 14.6719 0C14.9531 0 15.1875 0.09375 15.375 0.28125L17.7188 2.625C17.9062 2.8125 18 3.04688 18 3.32812C18 3.60938 17.9062 3.84375 17.7188 4.03125ZM0 14.25L11.0625 3.1875L14.8125 6.9375L3.75 18H0V14.25Z"
+        fill="#021123"
+      />
+    </Svg>
+  );
+};
+
+export const IconTrash = () => {
+  return (
+    <Svg width="10" height="12" viewBox="0 0 10 12" fill="none">
+      <Path
+        d="M7 0.65625H9.3125V2H0V0.65625H2.3125L3 0H6.3125L7 0.65625ZM2 4V10.6562H7.3125V4H2ZM0.65625 10.6562V2.65625H8.65625V10.6562C8.65625 11.0104 8.52083 11.3229 8.25 11.5938C7.97917 11.8646 7.66667 12 7.3125 12H2C1.64583 12 1.33333 11.8646 1.0625 11.5938C0.791667 11.3229 0.65625 11.0104 0.65625 10.6562Z"
         fill="#021123"
       />
     </Svg>
