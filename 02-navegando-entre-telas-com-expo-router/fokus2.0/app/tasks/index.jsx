@@ -12,15 +12,6 @@ export default function Tasks() {
     <View style={styles.container}>
       <View style={styles.wrapper}>
         <View style={styles.inner}>
-          {/* {tasks.map(t => {
-                    return (
-                        <TaskItem
-                            completed={t.completed}
-                            text={t.description}
-                            key={t.id}
-                        />
-                    )
-                })} */}
           <FlatList
             data={tasks}
             renderItem={({ item }) => (
@@ -29,6 +20,7 @@ export default function Tasks() {
                 text={item.description}
                 onPressDelete={() => deleteTask(item.id)}
                 onToggleComplete={() => toggleTaskCompleted(item.id)}
+                onPressEdit={() => router.navigate(`/edit-task/${item.id}`)}
               />
             )}
             keyExtractor={(item) => item.id}
