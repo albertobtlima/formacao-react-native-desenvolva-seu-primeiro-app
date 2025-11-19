@@ -1,13 +1,13 @@
 import {
-  Keyboard,
   KeyboardAvoidingView,
-  Platform,
+  Text,
+  View,
+  TextInput,
   Pressable,
   StyleSheet,
-  Text,
-  TextInput,
+  Platform,
   TouchableWithoutFeedback,
-  View,
+  Keyboard,
 } from "react-native";
 import { IconSave } from "../../components/Icons";
 import useTaskContext from "../../components/context/useTaskContext";
@@ -23,7 +23,6 @@ export default function AddTask() {
     if (!description) {
       return;
     }
-
     addTask(description);
     setDescription("");
     router.navigate("/tasks");
@@ -37,13 +36,13 @@ export default function AddTask() {
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <View style={styles.inner}>
           <Text style={styles.text}>Adicionar uma tarefa:</Text>
-          <Text style={styles.label}>Em que você está trabalhando</Text>
+          <Text style={styles.label}>Em que você está trabalhando?</Text>
           <TextInput
             style={styles.input}
             numberOfLines={10}
             multiline={true}
             value={description}
-            onChange={setDescription}
+            onChangeText={setDescription}
           />
           <View style={styles.actions}>
             <Pressable style={styles.button} onPress={submitTask}>
@@ -65,12 +64,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   text: {
-    color: "#fff",
+    color: "#FFF",
     textAlign: "center",
     fontSize: 26,
   },
   inner: {
-    backgroundColor: "#98a0a8",
+    backgroundColor: "#98A0A8",
     width: "90%",
     borderRadius: 8,
     padding: 16,

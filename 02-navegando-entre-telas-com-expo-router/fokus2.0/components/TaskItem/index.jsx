@@ -1,4 +1,4 @@
-import { View, Text, Pressable, StyleSheet } from "react-native";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 import { IconCheck, IconPencil, IconTrash } from "../Icons";
 
 const TaskItem = ({
@@ -11,7 +11,7 @@ const TaskItem = ({
   const cardStyles = [styles.card];
 
   if (completed) {
-    cardStyles.push(styles.carCompleted);
+    cardStyles.push(styles.cardCompleted);
   }
 
   return (
@@ -33,7 +33,7 @@ const TaskItem = ({
 const styles = StyleSheet.create({
   card: {
     flexDirection: "row",
-    backgroundColor: "#98a0a8",
+    backgroundColor: "#98A0A8",
     alignItems: "center",
     justifyContent: "space-between",
     paddingHorizontal: 8,
@@ -41,8 +41,8 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     gap: 8,
   },
-  carCompleted: {
-    backgroundColor: "#0f725c",
+  cardCompleted: {
+    backgroundColor: "#0F725C",
   },
   text: {
     flex: 1,
