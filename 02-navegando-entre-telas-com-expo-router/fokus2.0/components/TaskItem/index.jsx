@@ -1,7 +1,7 @@
 import { View, Text, Pressable, StyleSheet } from "react-native";
 import { IconCheck, IconPencil, IconTrash } from "../Icons";
 
-export const TaskItem = ({
+const TaskItem = ({
   completed,
   text,
   onToggleComplete,
@@ -51,3 +51,5 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
 });
+
+export default TaskItem;
